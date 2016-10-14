@@ -24,7 +24,7 @@ def list_of_items(items):
     'money, a student handbook, laptop'
 
     """
-    pass
+    string=""
     for i, j in enumerate(items):
         string = string + j["name"]
         if i != (len(items) -1):
