@@ -199,10 +199,10 @@ def print_menu(exits, room_items, inv_items):
         print_exit(direction, exit_leads_to(exits, direction))
 
     for take_item in room_items:
-        print("TAKE " + take_item["id"] + " to take " + take_item["name"])
+        print("TAKE " + take_item["id"])
 
     for drop_item in inv_items:
-        print("DROP " + drop_item["id"] + " to drop " + drop_item["name"])
+        print("DROP " + drop_item["id"])
 
     print("What do you want to do?")
 
