@@ -249,17 +249,13 @@ def execute_take(item_id):
     "You cannot take that."
     """
     pass
-    for item in current_room["items"]:
-        if item["id"] == item_id:
-            weight = inventory_mass() + item["mass"]
-            if weight > WEIGHT_LIMIT:
-                print("You can only carry " + str(WEIGHT_LIMIT) + "kg!")
-                return
-
-            current_room["items"].remove(item)
-            inventory.append(item)
-            return
-    
+if item_id in current_room["items"]:
+        current_room["items"].remove(items_id)
+        print("You picked up the %s" %item_id) 
+        inventory.append(item_id)
+        
+    else:
+        print("You cannot take that")
 
 def execute_drop(item_id):
     """This function takes an item_id as an argument and moves this item from the
