@@ -54,8 +54,8 @@ def print_room_items(room):
     Note: <BLANKLINE> here means that doctest should expect a blank line.
 
     """
-    pass
-     if len(room["items"]) != 0:
+    
+    if len(room["items"]) != 0:
         print("There is " + list_of_items(room["items"]) + " here.")
         print()
 
@@ -70,7 +70,7 @@ def print_inventory_items(items):
     <BLANKLINE>
 
     """
-    pass
+    
     print("You have " + list_of_items(items) + ".")
     print()
 
@@ -232,7 +232,7 @@ def execute_go(direction):
     (and prints the name of the room into which the player is
     moving). Otherwise, it prints "You cannot go there."
     """
-    pass
+    
     global current_room
     
     if is_valid_exit(current_room["exits"], direction):
@@ -248,8 +248,8 @@ def execute_take(item_id):
     there is no such item in the room, this function prints
     "You cannot take that."
     """
-    pass
-if item_id in current_room["items"]:
+
+    if item_id in current_room["items"]:
         current_room["items"].remove(items_id)
         print("You picked up the %s" %item_id) 
         inventory.append(item_id)
@@ -262,7 +262,7 @@ def execute_drop(item_id):
     player's inventory to list of items in the current room. However, if there is
     no such item in the inventory, this function prints "You cannot drop that."
     """
-    pass
+    
     for item in inventory:
         if item["id"] == item_id:
             inventory.remove(item)
